@@ -1,0 +1,16 @@
+load(
+    "@rules_vivado//build/vivado:rules.bzl",
+    "vivado_library",
+)
+
+package(default_visibility = ["//visibility:public"])
+
+vivado_library(
+    name = "sv",
+    srcs = [
+        "dff.sv",
+    ],
+    deps = [
+        "//third_party/xilinx:glbl",
+    ]
+)

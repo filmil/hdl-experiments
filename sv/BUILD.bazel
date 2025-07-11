@@ -6,11 +6,24 @@ load(
 package(default_visibility = ["//visibility:public"])
 
 vivado_library(
-    name = "sv",
+    name = "dff",
     srcs = [
         "dff.sv",
+    ],
+    hdrs = [
+        "dff.svh",
     ],
     deps = [
         "//third_party/xilinx:glbl",
     ]
+)
+
+vivado_library(
+    name = "top",
+    srcs = [
+        "top.sv",
+    ],
+    deps = [
+        ":dff",
+    ],
 )

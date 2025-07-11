@@ -1,0 +1,27 @@
+name: Bazel Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 0' # Run every Sunday at midnight UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache Bazel
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/bazel
+          key: ${{ runner.os }}-bazel-${{ hashFiles('**/WORKSPACE', '**/BUILD', '**/BUILD.bazel') }}
+          restore-keys: |
+            ${{ runner.os }}-bazel-
+
+      - name: Build with Bazel
+        run: bazel build //... -- -//src/dff/tool_vivado/...

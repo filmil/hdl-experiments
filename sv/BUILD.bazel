@@ -1,29 +1,16 @@
-load(
-    "@rules_vivado//build/vivado:rules.bzl",
-    "vivado_library",
-)
-
 package(default_visibility = ["//visibility:public"])
 
-vivado_library(
-    name = "dff",
-    srcs = [
-        "dff.sv",
-    ],
-    hdrs = [
-        "dff.svh",
-    ],
-    deps = [
-        "//third_party/xilinx:glbl",
-    ]
+filegroup(
+    name = "srcs",
+    srcs = ["dff.sv"],
 )
 
-vivado_library(
-    name = "top",
-    srcs = [
-        "top.sv",
-    ],
-    deps = [
-        ":dff",
-    ],
+filegroup(
+    name = "hdrs",
+    srcs = ["dff.svh"],
+)
+
+filegroup(
+    name = "top_srcs",
+    srcs = ["top.sv"],
 )

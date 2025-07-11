@@ -1,3 +1,6 @@
 bazel-*
 user.bazelrc
 .nvim
+.hdl_checker
+.nvim
+

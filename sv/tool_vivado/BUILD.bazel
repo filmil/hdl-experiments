@@ -1,0 +1,29 @@
+load(
+    "@rules_vivado//build/vivado:rules.bzl",
+    "vivado_library",
+)
+
+package(default_visibility = ["//visibility:public"])
+
+vivado_library(
+    name = "dff",
+    srcs = [
+        "//sv:srcs",
+    ],
+    hdrs = [
+        "//sv:hdrs",
+    ],
+    deps = [
+        "//third_party/xilinx:glbl",
+    ]
+)
+
+vivado_library(
+    name = "top",
+    srcs = [
+        "//sv:top_srcs",
+    ],
+    deps = [
+        ":dff",
+    ],
+)

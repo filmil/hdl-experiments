@@ -1,3 +1,4 @@
+# BUILD rules for building the source code using vivado tooling.
 load(
     "@rules_vivado//build/vivado:rules.bzl",
     "vivado_library",
@@ -8,10 +9,10 @@ package(default_visibility = ["//visibility:public"])
 vivado_library(
     name = "dff",
     srcs = [
-        "//sv:srcs",
+        "//src/dff:srcs",
     ],
     hdrs = [
-        "//sv:hdrs",
+        "//src/dff:hdrs",
     ],
     deps = [
         "//third_party/xilinx:glbl",
@@ -21,7 +22,7 @@ vivado_library(
 vivado_library(
     name = "top",
     srcs = [
-        "//sv:top_srcs",
+        "//src/dff:top_srcs",
     ],
     deps = [
         ":dff",

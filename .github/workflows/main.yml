@@ -34,4 +34,7 @@ jobs:
             ${{ runner.os }}-bazel-
 
       - name: Build with Bazel
-        run: bazel --max_idle_secs=10 build //... -- -//src/dff/tool_vivado/...
+        run: |
+          bazel --max_idle_secs=10 \
+            build //... -- -//src/dff/tool_vivado/...
+

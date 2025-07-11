@@ -5,8 +5,10 @@ load(
     "vhdl_run",
 )
 
+package(default_visibility = [ "//visibility:public"])
+
 vhdl_library(
-    name = "ex2",
+    name = "ex3",
     srcs = [
         "ex3.vhdl",
     ],

@@ -33,3 +33,15 @@ use_repo(
     "rules_python_internal",
 )
 
+bazel_dep(name = "rules_doxygen", version = "2.2.1", dev_dependency = True)
+git_override(
+    module_name = "rules_doxygen",
+    commit = "96561302a5d0796e50693cdca39a5788d4a4a8f6",
+    remote = "https://github.com/TendTo/rules_doxygen.git",
+)
+
+doxygen_extension = use_extension(
+    "@rules_doxygen//:extensions.bzl",
+    "doxygen_extension",
+)
+use_repo(doxygen_extension, "doxygen")

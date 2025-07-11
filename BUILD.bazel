@@ -1,5 +1,6 @@
 load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 load("@bazel_gazelle//:def.bzl", "gazelle")
+load("@doxygen//:doxygen.bzl", "doxygen")
 
 # bazel run //:gazelle
 # gazelle:prefix github.com/filmil/a200t_examples
@@ -19,4 +20,40 @@ gazelle(
         "-prune",
     ],
     command = "update-repos",
+)
+
+doxygen(
+    name = "docs",
+    srcs = [
+        # Targets
+        "//src/ex1",
+        "//src/ex1:pkg",
+        "//src/ex3",
+        "//src/ex4/lib1:ex4_lib1",
+        "//src/ex4",
+        "//src/twoproc",
+    ] + [
+        # Files
+        "README.md",
+    ],
+    configurations = [
+        "OPTIMIZE_OUTPUT_VHDL = YES",
+
+        # Generate docs even for undocumented items.
+        "EXTRACT_ALL = YES",
+
+        # Options below were recommended by doxygen.
+        "INHERIT_DOCS = NO",
+        "HIDE_SCOPE_NAMES = YES",
+        "ENABLE_PREPROCESSING = NO",
+        "EXTRACT_PACKAGE = YES",
+        "EXTRACT_PRIVATE = YES",
+        "IMAGE_PATH = doc",
+        "FILE_PATTERNS += *.png",
+    ],
+    generate_html = True,
+    generate_latex = False,
+    project_brief = "Example hardware for the Alinx A200T board",
+    project_name = "a200t_examples",
+    use_mdfile_as_mainpage = "README.md",
 )

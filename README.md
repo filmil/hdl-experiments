@@ -8,22 +8,27 @@ This project provides examples of HDL (Hardware Description Language) code, incl
 
 The project is organized as follows:
 
-- `dff/`: Contains the core DFF logic.
-    - `dff.sv`: Implements the parameterized D-type flip-flop module.
-    - `dff.svh`: Header file for the DFF module (currently seems unused).
-    - `top.sv`: A top-level module that instantiates the DFF.
-    - `README.md`: Contains notes about the learning goals for this specific module.
-- `third_party/`: Contains external dependencies, such as Xilinx libraries.
+- `src/`: Contains all HDL source code.
+    - `dff/`: A D-type flip-flop implemented in SystemVerilog.
+    - `ex1/`: A simple VHDL example.
+    - `ex2/`: Another VHDL example, demonstrating a different concept.
+    - `ex3/`: A third VHDL example.
+    - `ex4/`: A VHDL example with a library.
+    - `twoproc/`: A VHDL example using a two-process design.
+- `third_party/`: Contains external dependencies, such as Xilinx libraries and NVC.
 - `tools/`: Contains utility scripts, like Bazel build tools.
 - `BUILD.bazel`, `MODULE.bazel`, `WORKSPACE`: Bazel build system files.
+- `.github/`: Contains GitHub Actions CI configuration.
 
 ## Purpose
 
 The primary goal of this project is to serve as a hands-on example for understanding:
-- Basic SystemVerilog syntax and concepts.
-- Module instantiation and parameterization.
-- Simple digital logic design (D-type flip-flop).
+- Basic SystemVerilog and VHDL syntax and concepts.
+- Module instantiation and parameterization in SystemVerilog.
+- VHDL entity, architecture, and package concepts.
+- Simple digital logic design.
 - Using Bazel for building HDL projects.
+- Continuous Integration (CI) with GitHub Actions.
 
 ## Usage
 
@@ -41,4 +46,4 @@ The project also uses formatting and dependency management tools:
 
 ## Learning Goals
 
-As noted in `dff/README.md`, a primary goal of this project is to facilitate learning SystemVerilog (sv). The DFF example is a vehicle for exploring HDL concepts.
+This project aims to facilitate learning SystemVerilog and VHDL. The examples provided cover various fundamental concepts in both languages.

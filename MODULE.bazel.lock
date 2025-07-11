@@ -28,13 +28,14 @@
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/googletest/1.11.0/MODULE.bazel": "3a83f095183f66345ca86aa13c58b59f9f94a2f81999c093d4eeaa2d262d12f4",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/googletest/1.14.0/MODULE.bazel": "cfbcbf3e6eac06ef9d85900f64424708cc08687d1b527f0ef65aa7517af8118f",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/googletest/1.14.0/source.json": "2478949479000fdd7de9a3d0107ba2c85bb5f961c3ecb1aa448f52549ce310b5",
+    "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.10/MODULE.bazel": "8cb8efaf200bdeb2150d93e162c40f388529a25852b332cec879373771e48ed5",
+    "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.10/source.json": "f22828ff4cf021a6b577f1bf6341cb9dcd7965092a439f64fc1bb3b7a5ae4bd5",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.4/MODULE.bazel": "9b328e31ee156f53f3c416a64f8491f7eb731742655a47c9eec4703a71644aee",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.5/MODULE.bazel": "5733b54ea419d5eaf7997054bb55f6a1d0b5ff8aedf0176fef9eea44f3acda37",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.6/MODULE.bazel": "ad6eeef431dc52aefd2d77ed20a4b353f8ebf0f4ecdd26a807d2da5aa8cd0615",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.7/MODULE.bazel": "72fd4a0ede9ee5c021f6a8dd92b503e089f46c227ba2813ff183b71616034814",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.8/MODULE.bazel": "9f142c03e348f6d263719f5074b21ef3adf0b139ee4c5133e2aa35664da9eb2d",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.9/MODULE.bazel": "4a87a60c927b56ddd67db50c89acaa62f4ce2a1d2149ccb63ffd871d5ce29ebc",
-    "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/platforms/0.0.9/source.json": "cd74d854bf16a9e002fb2ca7b1a421f4403cda29f824a765acd3a8c56f8d43e6",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/protobuf/21.7/MODULE.bazel": "a5a29bb89544f9b97edce05642fac225a808b5b7be74038ea3640fae2f8e66a7",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/protobuf/23.1/MODULE.bazel": "88b393b3eb4101d18129e5db51847cd40a5517a53e81216144a8c32dfeeca52a",
     "https://raw.githubusercontent.com/filmil/bazel-central-registry/dev/modules/protobuf/24.4/MODULE.bazel": "7bc7ce5f2abf36b3b7b7c8218d3acdebb9426aeb35c2257c96445756f970eb12",
@@ -265,7 +266,7 @@
     "@@platforms//host:extension.bzl%host_platform": {
       "general": {
         "bzlTransitiveDigest": "xelQcPZH8+tmuOHVjL9vDxMnnQNMlwj0SlvgoqBkm4U=",
-        "usagesDigest": "meSzxn3DUCcYEhq4HQwExWkWtU4EjriRBQLsZN+Q0SU=",
+        "usagesDigest": "V1R2Y2oMxKNfx2WCWpSCaUV1WefW1o8HZGm3v1vHgY4=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -277,6 +278,58 @@
           }
         },
         "recordedRepoMappingEntries": []
+      }
+    },
+    "@@rules_doxygen~//:extensions.bzl%doxygen_extension": {
+      "general": {
+        "bzlTransitiveDigest": "Dy0TxZ+d9SV8qWqZC2PhB8psWYEBuEr6HhHdvecVTE4=",
+        "usagesDigest": "RmzTbT0Af52YC1CqDo7KvH/hn8IB+LwjlGbw4PYeJ1A=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "doxygen": {
+            "bzlFile": "@@rules_doxygen~//:extensions.bzl",
+            "ruleClassName": "doxygen_repository",
+            "attributes": {
+              "versions": [
+                "1.13.2",
+                "1.13.2",
+                "1.13.2",
+                "1.13.2",
+                "1.13.2"
+              ],
+              "sha256s": [
+                "dedbcf1d05911afc003989d33194ab95539e2ef4535cc00143b5917c22614406",
+                "dc981a4212875e8c6b81727eb43bb634167df0d4bc1681fb9053cc850e918acf",
+                "dc981a4212875e8c6b81727eb43bb634167df0d4bc1681fb9053cc850e918acf",
+                "f2c0a349403bc5b5ade3f501301e32b49ea31b3182666954bc398452fbc0dd1c",
+                "f2c0a349403bc5b5ade3f501301e32b49ea31b3182666954bc398452fbc0dd1c"
+              ],
+              "platforms": [
+                "windows",
+                "mac",
+                "mac-arm",
+                "linux",
+                "linux-arm"
+              ],
+              "executables": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_doxygen~",
+            "rules_doxygen",
+            "rules_doxygen~"
+          ]
+        ]
       }
     },
     "@@toolchains_riscv_gnu~//:extensions.bzl%riscv_toolchain": {

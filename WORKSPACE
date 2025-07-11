@@ -111,13 +111,6 @@ load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 gazelle_dependencies()
 
 load(":deps.bzl", go_local_deps = "go_dependencies")
-# NVC VHDL compiler.
-git_repository(
-    name = "bazel_rules_nvc",
-    commit = "ab1102750d3fbd9de1a38e2955a642474edc225b",
-    remote = "https://github.com/filmil/bazel_rules_nvc",
-)
-
 # Try to override the repo used in nvc_repositories below, since we need to
 # patch it for hermetic compilation.
 new_git_repository(
@@ -134,6 +127,14 @@ new_git_repository(
     ],
     remote = "https://github.com/nickg/nvc",
 )
+
+# NVC VHDL compiler.
+git_repository(
+    name = "bazel_rules_nvc",
+    commit = "ab1102750d3fbd9de1a38e2955a642474edc225b",
+    remote = "https://github.com/filmil/bazel_rules_nvc",
+)
+
 
 load("@bazel_rules_nvc//build/nvc:repositories.bzl", "nvc_repositories")
 

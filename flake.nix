@@ -17,7 +17,8 @@
 
       in
       {
-        devShells.default = with pkgs; (mkShell.override { stdenv = gcc14Stdenv; }) {
+        devShells.default = with pkgs; (
+          mkShell.override { stdenv = gcc14Stdenv; }) {
           name = "flake-example-shell";
           packages = [ 
             nix gnumake flex bison zstd gcc14

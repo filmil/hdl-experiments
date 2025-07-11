@@ -1,0 +1,15 @@
+load(
+    "@bazel_rules_nvc//build/nvc:rules.bzl",
+    "vhdl_elaborate",
+    "vhdl_library",
+    "vhdl_run",
+)
+
+vhdl_library(
+    name = "ex2",
+    srcs = [
+        "ex2.vhdl",
+        "ex2_body.vhdl",
+    ],
+)
+

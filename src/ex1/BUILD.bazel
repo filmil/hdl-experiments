@@ -1,0 +1,33 @@
+load(
+    "@bazel_rules_nvc//build/nvc:rules.bzl",
+    "vhdl_elaborate",
+    "vhdl_library",
+    "vhdl_run",
+)
+
+vhdl_library(
+    name = "ex1",
+    srcs = [
+        "test.vhdl",
+    ],
+    entities = ["hello_world"],
+    deps = [":pkg"],
+)
+
+vhdl_elaborate(
+    name = "hello_world",
+    library = ":ex1",
+)
+
+vhdl_run(
+    name = "sim",
+    entity = ":hello_world",
+)
+
+vhdl_library(
+    name = "pkg",
+    srcs = [
+        "package.vhdl",
+    ],
+)
+

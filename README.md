@@ -1,4 +1,6 @@
-# `hdl_examples`
+[![Bazel Build Status](https://github.com/filmil/hdl-experiments/actions/workflows/main.yml/badge.svg)](https://github.com/filmil/hdl-experiments/actions/workflows/main.yml)
+
+# `hdl-examples`
 
 This project provides examples of HDL (Hardware Description Language) code, including a D-type flip-flop (DFF) in SystemVerilog and several smaller examples in VHDL. It's intended as a learning exercise for understanding basic HDL concepts, syntax, and design patterns.
 

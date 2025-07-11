@@ -61,12 +61,11 @@ rules_cc_toolchains()
 
 git_repository(
     name = "bazel_local_nix",
-    commit = "c7fd90a25347afcdf115afdf759043b2a659465a",
     remote = "https://github.com/filmil/bazel_local_nix",
+    commit = "ab000de15929f7c8cd252913d2d5be90aaafef32",
 )
 
 load("@bazel_local_nix//:repositories.bzl", "bazel_local_nix_dependencies")
-
 bazel_local_nix_dependencies()
 
 # Using from git directly because latest release 0.9.0 has a visibility bug.
@@ -115,9 +114,8 @@ load(":deps.bzl", go_local_deps = "go_dependencies")
 # NVC VHDL compiler.
 git_repository(
     name = "bazel_rules_nvc",
-    commit = "da45b75acb8cb42ba2334199a7fa735961fc21ca",
+    commit = "ab1102750d3fbd9de1a38e2955a642474edc225b",
     remote = "https://github.com/filmil/bazel_rules_nvc",
-    shallow_since = "1727417268 +0000",
 )
 
 # Try to override the repo used in nvc_repositories below, since we need to

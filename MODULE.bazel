@@ -1,3 +1,5 @@
+module(name = "hdl-experiments", version = "0.0.0")
+
 bazel_dep(name = "toolchains_riscv_gnu", version = "1.0.0")
 
 riscv_toolchain = use_extension("@toolchains_riscv_gnu//:extensions.bzl", "riscv_toolchain")

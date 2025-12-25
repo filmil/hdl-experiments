@@ -1,13 +1,13 @@
 load(
     "@bazel_rules_nvc//build/nvc:rules.bzl",
+    "produce_waveform",
     "vhdl_elaborate",
     "vhdl_library",
     "vhdl_run",
-    "produce_waveform",
     "wave_view",
 )
 
-package(default_visibility = [ "//visibility:public"])
+package(default_visibility = ["//visibility:public"])
 
 vhdl_library(
     name = "inout_lib",
@@ -20,18 +20,18 @@ vhdl_library(
 )
 
 vhdl_elaborate(
-    name = "tb", # This should be the same as the entity name.
+    name = "tb",  # This should be the same as the entity name.
     library = ":inout_lib",
 )
 
 vhdl_run(
     name = "sim",
+    args = [
+        "--stop-time=10ns",
+    ],
     entity = ":tb",
     deps = [
         ":inout_lib",
-    ],
-    args = [
-        "--stop-time=10ns",
     ],
 )
 

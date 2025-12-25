@@ -5,7 +5,7 @@ load(
     "vhdl_run",
 )
 
-package(default_visibility = [ "//visibility:public"])
+package(default_visibility = ["//visibility:public"])
 
 vhdl_library(
     name = "twoproc",
@@ -13,4 +13,3 @@ vhdl_library(
         "lib.vhdl",
     ],
 )
-

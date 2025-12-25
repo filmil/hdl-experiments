@@ -16,7 +16,7 @@ vivado_library(
     ],
     deps = [
         "//third_party/xilinx:glbl",
-    ]
+    ],
 )
 
 vivado_library(

@@ -128,8 +128,8 @@
     "https://bcr.bazel.build/modules/rules_cc/0.2.8/MODULE.bazel": "f1df20f0bf22c28192a794f29b501ee2018fa37a3862a1a2132ae2940a23a642",
     "https://bcr.bazel.build/modules/rules_distroless/0.5.3/MODULE.bazel": "b777fd47fc17387604227fd61e2ed227e863308092ba8a7f028fc6a2d3bb60d4",
     "https://bcr.bazel.build/modules/rules_distroless/0.5.3/source.json": "6bab071fb144a37023e1da61858350890a00b86c0d77a3faa93ff7dfd3615c0e",
-    "https://bcr.bazel.build/modules/rules_doxygen/2.5.0/MODULE.bazel": "9313b96bdc6e2d3d6f32b79c4a28ba297af796111cd8d5fa00a4be6dd8ec6d4a",
-    "https://bcr.bazel.build/modules/rules_doxygen/2.5.0/source.json": "37944e37dd56f709449d2885cd5397d6b1a50905c91d3f302f46f23c89576cc8",
+    "https://bcr.bazel.build/modules/rules_doxygen/2.6.1/MODULE.bazel": "693384a4dfec6d6bd70bd397d8029652ed897d0324bcf40c9b4d44cfd5874c09",
+    "https://bcr.bazel.build/modules/rules_doxygen/2.6.1/source.json": "772f156cd3acab5084c10e8ba0704fa1a3c0176ecd9bb133587faecc63570822",
     "https://bcr.bazel.build/modules/rules_foreign_cc/0.15.1/MODULE.bazel": "c2c60d26c79fda484acb95cdbec46e89d6b28b4845cb277160ce1e0c8622bb88",
     "https://bcr.bazel.build/modules/rules_foreign_cc/0.15.1/source.json": "a161811a63ba8a859086da3b7ff3ad04f2e9c255d7727b41087103fc0eb22f55",
     "https://bcr.bazel.build/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "c9e8c682bf75b0e7c704166d79b599f93b72cfca5ad7477df596947891feeef6",
@@ -349,7 +349,7 @@
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_cc/0.2.2/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_cc/0.2.8/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_distroless/0.5.3/MODULE.bazel": "not found",
-    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_doxygen/2.5.0/MODULE.bazel": "not found",
+    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_doxygen/2.6.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_foreign_cc/0.15.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_fuzzing/0.5.2/MODULE.bazel": "not found",
@@ -565,6 +565,57 @@
             "buildifier_prebuilt+",
             "bazel_tools",
             "bazel_tools"
+          ]
+        ]
+      }
+    },
+    "@@rules_doxygen+//:extensions.bzl%doxygen_extension": {
+      "general": {
+        "bzlTransitiveDigest": "GcidKU62P7KaEpix4zkeuuIKYPyTmqeHpY/or3GXXz0=",
+        "usagesDigest": "JTRaPPunJTk+4v5PwZlaTpgnCnPmRmAe54Cw8jCMSOo=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "doxygen": {
+            "repoRuleId": "@@rules_doxygen+//:extensions.bzl%doxygen_repository",
+            "attributes": {
+              "versions": [
+                "1.15.0",
+                "1.15.0",
+                "1.15.0",
+                "1.15.0",
+                "1.15.0"
+              ],
+              "sha256s": [
+                "44658b9cc5c91749e6e3cc426ba63e2550b4a4a7619065acd77029aa234719c6",
+                "b7630eaa0d97bb50b0333929ef5dc1c18f9e38faf1e22dca3166189a9718faf0",
+                "b7630eaa0d97bb50b0333929ef5dc1c18f9e38faf1e22dca3166189a9718faf0",
+                "0ec2e5b2c3cd82b7106d19cb42d8466450730b8cb7a9e85af712be38bf4523a1",
+                "0ec2e5b2c3cd82b7106d19cb42d8466450730b8cb7a9e85af712be38bf4523a1"
+              ],
+              "platforms": [
+                "windows",
+                "mac",
+                "mac-arm",
+                "linux",
+                "linux-arm"
+              ],
+              "executables": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_doxygen+",
+            "rules_doxygen",
+            "rules_doxygen+"
           ]
         ]
       }

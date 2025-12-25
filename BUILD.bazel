@@ -53,7 +53,7 @@ doxygen(
     ],
     generate_html = True,
     generate_latex = False,
-    project_brief = "Example hardware for the Alinx A200T board",
-    project_name = "a200t_examples",
+    project_brief = "Examples of HDL",
+    project_name = "hdl_experiments",
     use_mdfile_as_mainpage = "README.md",
 )

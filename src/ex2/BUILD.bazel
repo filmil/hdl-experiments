@@ -9,8 +9,9 @@ package(default_visibility = ["//visibility:public"])
 
 vhdl_library(
     name = "ex2",
+    # do not sort
     srcs = [
-        "ex2.vhdl",
         "ex2_body.vhdl",
+        "ex2.vhdl",
     ],
 )

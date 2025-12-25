@@ -1,14 +1,7 @@
-load(
-    "@bazel_rules_nvc//build/nvc:rules.bzl",
-    "vhdl_elaborate",
-    "vhdl_library",
-    "vhdl_run",
-)
-
 package(default_visibility = ["//visibility:public"])
 
-vhdl_library(
-    name = "twoproc",
+filegroup(
+    name = "srcs",
     srcs = [
         "lib.vhdl",
     ],

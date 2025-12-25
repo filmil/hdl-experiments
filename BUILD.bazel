@@ -1,6 +1,6 @@
 load("@buildifier_prebuilt//:rules.bzl", "buildifier")
-load("@bazel_gazelle//:def.bzl", "gazelle")
-load("@doxygen//:doxygen.bzl", "doxygen")
+load("@gazelle//:def.bzl", "gazelle")
+load("@rules_doxygen//doxygen:doxygen.bzl", "doxygen")
 
 # bazel run //:gazelle
 # gazelle:prefix github.com/filmil/a200t_examples

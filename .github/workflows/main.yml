@@ -19,22 +19,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup bazel
-        uses: abhinavsingh/setup-bazel@v3
+        uses: bazel-contrib/setup-bazel@0.15.0
         with:
-          version: 8.4.1
+          bazelisk-cache: true
+          disk-cache: ${{ github.workflow }}
+          repository-cache: true
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Cache Bazel
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/bazel
-          key: ${{ runner.os }}-bazel-${{ hashFiles('**/WORKSPACE', '**/BUILD', '**/BUILD.bazel') }}
-          restore-keys: |
-            ${{ runner.os }}-bazel-
-
-      - name: Build with Bazel
+      - name: Build with Bazel, skip Vivado
         run: |
           bazel --max_idle_secs=10 \
-            build //... -- -//src/dff/tool_vivado/...
+            build //... -- \
+              -//src/dff/tool.vivado/...
+              -//third_party/xilinx/...
 

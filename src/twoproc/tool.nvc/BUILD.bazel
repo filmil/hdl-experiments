@@ -13,4 +13,3 @@ vhdl_library(
         "//src/twoproc:srcs",
     ],
 )
-

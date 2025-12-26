@@ -16,34 +16,35 @@ doxygen(
     name = "docs",
     srcs = [
         # Targets
-        #"//src/ex1",
-        #"//src/ex1:pkg",
-        #"//src/ex3",
-        #"//src/ex4/lib1:ex4_lib1",
-        #"//src/ex4",
-        #"//src/twoproc:srcs",
+        "//src/ex1",
+        "//src/ex1:pkg",
+        "//src/ex3",
+        "//src/ex4/lib1:ex4_lib1",
+        "//src/ex4",
+        "//src/twoproc:srcs",
+        "//src/genpkg:srcs",
     ] + [
         # Files
         "README.md",
     ],
     configurations = [
-        #"OPTIMIZE_OUTPUT_VHDL = YES",
+        "OPTIMIZE_OUTPUT_VHDL = YES",
 
         # Generate docs even for undocumented items.
-        #"EXTRACT_ALL = YES",
+        "EXTRACT_ALL = YES",
 
         # Options below were recommended by doxygen.
-        #"INHERIT_DOCS = NO",
-        #"HIDE_SCOPE_NAMES = YES",
-        #"ENABLE_PREPROCESSING = NO",
-        #"EXTRACT_PACKAGE = YES",
-        #"EXTRACT_PRIVATE = YES",
-        #"IMAGE_PATH = doc",
-        #"FILE_PATTERNS += *.png",
+        "INHERIT_DOCS = NO",
+        "HIDE_SCOPE_NAMES = YES",
+        "ENABLE_PREPROCESSING = NO",
+        "EXTRACT_PACKAGE = YES",
+        "EXTRACT_PRIVATE = YES",
+        "IMAGE_PATH = doc",
+        "FILE_PATTERNS += *.png",
     ],
-    #generate_html = True,
+    generate_html = True,
     generate_latex = False,
-    #project_brief = "Examples of HDL",
-    #project_name = "hdl_experiments",
+    project_brief = "Examples of HDL",
+    project_name = "hdl_experiments",
     use_mdfile_as_mainpage = "README.md",
 )

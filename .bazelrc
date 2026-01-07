@@ -1,8 +1,11 @@
-common:nix --host_platform=@rules_nixpkgs_core//platforms:host
-common:nix --incompatible_enable_cc_toolchain_resolution
-#
+
 common --registry=https://raw.githubusercontent.com/filmil/bazel-registry/main
 common --registry=https://bcr.bazel.build
+
+common --enable_platform_specific_config
+build:linux --sandbox_add_mount_pair=/tmp
+build:macos --sandbox_add_mount_pair=/var/tmp
+build:windows --sandbox_add_mount_pair=C:\Temp
 
 # Verilator requires at least C++14
 build --action_env=BAZEL_CXXOPTS="-std=c++20"

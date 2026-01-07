@@ -21,15 +21,10 @@ doxygen_extension = use_extension("@rules_doxygen//:extensions.bzl", "doxygen_ex
 use_repo(doxygen_extension, "doxygen")
 
 
-bazel_dep(name = "toolchains_llvm", version = "1.5.0", dev_dependency = True)
-llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm", dev_dependency = True)
-llvm.toolchain(
-    name = "llvm_toolchain",
-    llvm_version = "20.1.4",
-)
-use_repo(llvm, "llvm_toolchain")
-
+bazel_dep(name = "hermetic_cc_toolchain", version = "3.1.0")
+toolchains = use_extension("@hermetic_cc_toolchain//toolchain:ext.bzl", "toolchains")
+use_repo(toolchains, "zig_sdk")
 register_toolchains(
-    "@llvm_toolchain//:all",
-    dev_dependency = True,
+    "@zig_sdk//toolchain/...",
+    "@zig_sdk//libc_aware/toolchain/...",
 )

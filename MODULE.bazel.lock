@@ -260,8 +260,6 @@
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_bid/1.1.0/source.json": "5b0c80eca01b5b420ddf196fc1b2e8c5550071804b00d4bbe5eda975376c29b9",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_ghdl/0.1.7/MODULE.bazel": "6ccae7f9d084a2d9331a945dc9c759b5e762e28e734494fe2e7e254f2f1e6709",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_ghdl/0.1.7/source.json": "04ffcc418176845d8c9c55a827ffb4ebb9fa55a7081391ab13b40cf1c04d76a0",
-    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_nvc/0.5.2/MODULE.bazel": "fbed8168608ffa907342a653c1df57eb451007f6af439a0fb622ff5ae8a9570c",
-    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_nvc/0.5.2/source.json": "b2785938308abbbabdf68e6326d06f36d58b8bcfde6303a930d97dfb3fc6324e",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_vivado/0.5.1/MODULE.bazel": "2f0c8a8e841cdf4fca4ddfb3ea3de3ffeee980dd6c84e2d40a74f11abd808ad0",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_vivado/0.5.1/source.json": "e64d93235520cede39fbcd9479326e020a0cd3a0d009ca8d8c85782aa4b84365",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_skylib/1.0.3/MODULE.bazel": "not found",

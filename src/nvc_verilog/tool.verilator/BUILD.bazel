@@ -1,0 +1,6 @@
+load("@rules_verilator//verilog:defs.bzl", "verilog_library")
+
+verilog_library(
+    name = "nvc_verilog",
+    srcs = ["//src/nvc_verilog:srcs"],
+)

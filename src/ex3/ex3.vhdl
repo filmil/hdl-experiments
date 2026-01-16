@@ -24,7 +24,7 @@ architecture example of thermostat is
     --! @constant diff_temp
     --! @brief The temperature difference for hysteresis.
     constant diff_temp: integer := 2;
-    
+
 begin
     --! @process controller
     --! @brief Controls the heater based on desired and actual temperatures.
@@ -37,5 +37,5 @@ begin
             heater_on <= false;
         end if;
     end process controller;
-    
+
 end architecture example;

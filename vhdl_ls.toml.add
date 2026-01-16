@@ -16,7 +16,3 @@ unnecessary_work_library = true
 #]
 #UNISIM.is_third_party = true
 
-[libraries]
-ex3.files = [
-  "src/ex3/ex3.vhdl"
-]

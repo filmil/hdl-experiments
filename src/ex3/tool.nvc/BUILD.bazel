@@ -1,0 +1,10 @@
+load("@rules_nvc//build/nvc:rules.bzl", "vhdl_library")
+
+package(default_visibility = ["//visibility:public"])
+
+vhdl_library(
+    name = "ex3",
+    srcs = [
+        "//src/ex3:srcs",
+    ],
+)

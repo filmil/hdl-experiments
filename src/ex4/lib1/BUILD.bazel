@@ -7,9 +7,20 @@ load(
 
 package(default_visibility = ["//visibility:public"])
 
+filegroup(
+    name = "srcs",
+    srcs = [
+        "lib1.vhdl",
+    ],
+    tags = [
+        "vhdl_ls",
+        "vhdl_ls_lib_ex4_lib1",
+    ],
+)
+
 vhdl_library(
     name = "ex4_lib1",
     srcs = [
-        "lib1.vhdl",
+        ":srcs",
     ],
 )

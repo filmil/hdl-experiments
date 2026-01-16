@@ -14,6 +14,12 @@ unnecessary_work_library = true
 ex3.files = [
   "src/ex3/ex3.vhdl"
 ]
+ex4_lib1.files = [
+  "src/ex4/lib1/lib1.vhdl"
+]
+ex4.files = [
+  "src/ex4/ex4.vhdl"
+]
 
 # Libraries can be marked as third-party to disable some analysis warnings, such as unused declarations
 #UNISIM.files = [

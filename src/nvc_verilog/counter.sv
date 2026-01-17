@@ -4,7 +4,7 @@ module counter #(
 ) (
     input logic reset, ///< Synchronous reset, active high.
     input logic clk, ///< Clock.
-    output reg [Width-1:0] count ///< The counter output value.
+    output logic [Width-1:0] count ///< The counter output value.
 );
     logic [Width-1:0] next_value;
     always_comb begin

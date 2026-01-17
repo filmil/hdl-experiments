@@ -1,0 +1,24 @@
+load("@bazel_lib//lib:write_source_files.bzl", "write_source_files")
+load("@lit2md//build:macros.bzl", "lit2md2")
+
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "srcs",
+    srcs = [
+        "mod.sv",
+    ],
+)
+
+lit2md2(
+    name = "md",
+    src = "mod.sv",
+    out = "mod.sv.md",
+)
+
+write_source_files(
+    name = "update",
+    files = {
+        "README.md": ":md",
+    }
+)

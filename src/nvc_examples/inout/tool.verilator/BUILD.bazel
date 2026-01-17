@@ -1,0 +1,31 @@
+load("@rules_verilator//verilator:defs.bzl", "verilator_cc_library")
+load("@rules_verilator//verilog:defs.bzl", "verilog_library")
+
+verilog_library(
+    name = "inout",
+    srcs = ["//src/nvc_examples/inout:srcs"],
+)
+
+
+verilator_cc_library(
+    name = "lib",
+    module = ":inout",
+    module_top = "mod",
+    trace = True,  # Enable waveform tracing
+    vopts = [
+        "-Wall",
+        "--x-assign fast",
+        "--x-initial fast",
+    ],
+)
+
+cc_library(
+    name = "my_test",
+    deps = [":lib"],
+)
+
+cc_binary(
+    name = "bin",
+    srcs = [ "main.cc"],
+    deps = [ ":my_test"],
+)

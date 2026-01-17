@@ -20,9 +20,9 @@ endmodule
 //] ```
 //] ** Error: 'clkout' cannot be assigned in a procedural block
 //] > /home/filmil/code/hw/hdl-experiments/src/nvc_examples/inout/mod.sv:13
-//] |
+//]    |
 //] 13 |         clkout = clkin;
-//] |         ^^^^^^
+//]    |         ^^^^^^
 //] ```
 //]
 //] Verilator does not seem to have any issues with this.

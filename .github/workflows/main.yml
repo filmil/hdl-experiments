@@ -1,4 +1,4 @@
-name: Bazel Build
+name: Build
 
 on:
   pull_request:
@@ -29,11 +29,5 @@ jobs:
       - name: Build with Bazel, skip Vivado
         run: |
           bazel --max_idle_secs=10 \
-            build \
-              //src/ex1/... \
-              //src/ex2/... \
-              //src/ex3/... \
-              //src/ex4/... \
-              //src/inout/... \
-              //src/twoproc/...
+            build //... -- -//src/bugs/...
 

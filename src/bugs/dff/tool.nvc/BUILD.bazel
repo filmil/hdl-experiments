@@ -5,7 +5,7 @@ package(default_visibility = ["//visibility:public"])
 verilog_library(
     name = "dff",
     srcs = [
-        "//src/dff:srcs",
+        "//src/bugs/dff:srcs",
     ],
 )
 

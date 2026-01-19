@@ -1,6 +1,3 @@
-// Presumably includes are no longer needed.
-`include "dff.svh"
-
 // Here's how to get to a constant from a package.
 import dffx::dff_bits_count;
 

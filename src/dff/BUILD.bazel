@@ -2,15 +2,9 @@ package(default_visibility = ["//visibility:public"])
 
 filegroup(
     name = "srcs",
-    srcs = ["dff.sv"],
+    srcs = [
+        "dff.sv",
+        "top.sv",
+    ],
 )
 
-filegroup(
-    name = "hdrs",
-    srcs = ["dff.svh"],
-)
-
-filegroup(
-    name = "top_srcs",
-    srcs = ["top.sv"],
-)

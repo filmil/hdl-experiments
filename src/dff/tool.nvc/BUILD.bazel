@@ -1,0 +1,16 @@
+load("@rules_nvc//build/nvc:rules.bzl", "verilog_library", "vhdl_elaborate")
+
+package(default_visibility = ["//visibility:public"])
+
+verilog_library(
+    name = "dff",
+    srcs = [
+        "//src/dff:srcs",
+    ],
+)
+
+vhdl_elaborate(
+    name = "hello_world",
+    library = ":dff",
+)
+

@@ -4,21 +4,16 @@ module(
 )
 
 
-bazel_dep(name = "bazel_rules_ghdl", version = "0.1.7")
-bazel_dep(name = "rules_nvc", version = "1.1.0")
-bazel_dep(name = "bazel_rules_vivado", version = "0.5.1", repo_name = "rules_vivado")
+bazel_dep(name = "bazel_lib", version = "3.1.0")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "buildifier_prebuilt", version = "8.2.0.2")
 bazel_dep(name = "fshlib", version = "0.1.6")
 bazel_dep(name = "gazelle", version = "0.47.0")
 bazel_dep(name = "gotopt2", version = "2.2.4")
-bazel_dep(name = "platforms", version = "1.0.0")
-bazel_dep(name = "rules_cc", version = "0.2.16")
-bazel_dep(name = "rules_proto", version = "7.0.2")
 bazel_dep(name = "lit2md", version = "1.1.9")
-bazel_dep(name = "bazel_lib", version = "3.1.0")
-
-
+bazel_dep(name = "platforms", version = "1.0.0")
+bazel_dep(name = "rules_nvc", version = "1.1.0")
+bazel_dep(name = "rules_proto", version = "7.0.2")
 bazel_dep(name = "vhdl_ls_gen", version = "0.0.1")
 
 

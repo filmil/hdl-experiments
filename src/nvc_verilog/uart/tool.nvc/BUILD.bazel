@@ -7,11 +7,39 @@ verilog_library(
     srcs = [
         "//third_party/systemverilog-uart:srcs",
     ],
+    hdrs = [
+        "//third_party/systemverilog-uart:hdrs",
+    ],
+    includes = [
+        "third_party/systemverilog-uart/src/rtl",
+    ],
 )
 
 verilog_library(
-    name = "uart_tb",
+    name = "uart_tx_tb",
     srcs = [
-        "//third_party/systemverilog-uart:tb_srcs",
+        "//third_party/systemverilog-uart:tb_tx_srcs",
+    ],
+    deps = [
+        ":uart",
+    ],
+    includes = [
+        "third_party/systemverilog-uart/src/testbench",
+    ],
+)
+
+verilog_library(
+    name = "uart_rx_tb",
+    srcs = [
+        "//third_party/systemverilog-uart:tb_rx_srcs",
+    ],
+    hdrs = [
+        "//third_party/systemverilog-uart:srcs",
+    ],
+    deps = [
+        ":uart",
+    ],
+    includes = [
+        "third_party/systemverilog-uart/src/testbench",
     ],
 )

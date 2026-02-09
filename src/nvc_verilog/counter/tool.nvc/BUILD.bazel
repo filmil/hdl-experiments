@@ -5,6 +5,6 @@ package(default_visibility = ["//visibility:public"])
 verilog_library(
     name = "nvc_verilog",
     srcs = [
-        "//src/nvc_verilog:srcs",
+        "//src/nvc_verilog/counter:srcs",
     ],
 )

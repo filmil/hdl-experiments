@@ -7,4 +7,6 @@ verilog_library(
     srcs = [
         "//src/nvc_verilog/counter:srcs",
     ],
+    includes = [
+    ],
 )

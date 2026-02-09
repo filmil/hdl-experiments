@@ -1,0 +1,7 @@
+# This is a git-vendor config file.
+# For details see https://github.com/thejoshwolfe/git-vendor/blob/main/README.md#reference
+
+dir=third_party/systemverilog-uart/src
+url=https://github.com/filmil/SystemVerilog-UART
+follow-branch=master
+commit=2451800259766d9e2d8c0186137e1a0e05ed9ccf

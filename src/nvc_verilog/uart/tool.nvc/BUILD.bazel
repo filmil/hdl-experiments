@@ -1,0 +1,17 @@
+load("@rules_nvc//build/nvc:rules.bzl", "verilog_library")
+
+package(default_visibility = ["//visibility:public"])
+
+verilog_library(
+    name = "uart",
+    srcs = [
+        "//third_party/systemverilog-uart:srcs",
+    ],
+)
+
+verilog_library(
+    name = "uart_tb",
+    srcs = [
+        "//third_party/systemverilog-uart:tb_srcs",
+    ],
+)

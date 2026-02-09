@@ -1,0 +1,20 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "srcs",
+    # do not sort
+    srcs = [
+        "src/rtl/if/uart_if.sv",
+        "src/rtl/uart_rx.sv",
+        "src/rtl/uart_tx.sv",
+        "src/rtl/uart.sv",
+    ],
+)
+
+filegroup(
+    name = "tb_srcs",
+    srcs = [
+        "src/testbench/uart_rx_tb.sv",
+        "src/testbench/uart_tx_tb.sv",
+    ],
+)
